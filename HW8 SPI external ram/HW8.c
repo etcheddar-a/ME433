@@ -3,8 +3,8 @@
 #include "hardware/spi.h"
 #include <math.h>
 
-#define PIN_CS_RAM 17
-#define PIN_CS_DAC 20
+#define PIN_CS_RAM 20
+#define PIN_CS_DAC 17
 
 static inline void cs_select(uint cs_pin) {
     asm volatile("nop \n nop \n nop"); // FIXME
@@ -19,8 +19,8 @@ static inline void cs_deselect(uint cs_pin) {
 }
 
 // function prototypes
-void dac_write(int channel, float voltage);
 void update_dac_from_ram(int);
+void test_run();
 
 void spi_ram_init();
 void spi_ram_write(uint16_t, uint8_t *, int);
@@ -32,17 +32,23 @@ int main()
 {
     stdio_init_all();
 
+    // while(!stdio_usb_connected()){
+    //     tight_loop_contents();
+    // }
+    // sleep_ms(1000);
+    // printf("USB connected, starting...\n");
+
     // initialize Pico SPI
-    spi_init(spi_default, 1000 * 1000); // the baud, or bits per second
+    spi_init(spi_default, 1000*1000); // the baud, or bits per second
     gpio_set_function(PICO_DEFAULT_SPI_RX_PIN, GPIO_FUNC_SPI);
     gpio_set_function(PICO_DEFAULT_SPI_SCK_PIN, GPIO_FUNC_SPI);
     gpio_set_function(PICO_DEFAULT_SPI_TX_PIN, GPIO_FUNC_SPI);
 
     // initialize chip select pins
-    gpio_set_function(PIN_CS_RAM, GPIO_FUNC_SIO);
+    gpio_init(PIN_CS_RAM);
     gpio_set_dir(PIN_CS_RAM, GPIO_OUT);
     gpio_put(PIN_CS_RAM, 1); // deassert the chip select
-    gpio_set_function(PIN_CS_DAC, GPIO_FUNC_SIO);
+    gpio_init(PIN_CS_DAC);
     gpio_set_dir(PIN_CS_DAC, GPIO_OUT);
     gpio_put(PIN_CS_DAC, 1); // deassert the chip select
 
@@ -52,29 +58,39 @@ int main()
     // fill RAM with bitshifted sine wave
     ram_write_sine();
 
+    printf("Sine wave written to RAM.\n");
+
     int i = 0;
     while (true) {
+        // update_dac_from_ram(i*2);
+        // i = (i+1) % 1024;
+        // sleep_ms(1);
         for (i=0; i<1024*2; i=i+2){
+            // update the DAC from the RAM
             update_dac_from_ram(i);
+
+            //test_run(i);
+
             sleep_ms(1);
         }
     }
 }
 
-
-void dac_write(int channel, float voltage) {
+void test_run(int i) {
+    uint16_t data_short = 0;
     uint8_t data[2];
-    // first 8 bits
-    data[0] = 0b01110000;
-    data[0] = data[0] | ((channel & 0b1) << 7); // set the channel bit
-    uint16_t v = voltage / 3.3 * 1023; // scale to 0-1023
-    data[0] = data[0] | ((v >> 6)&0b00001111); // put into last 4 bits
 
-    // second 8 bits
-    data[1] = (v << 2) & 0xFF; // put the remaining 6 bits into the second byte
+    uint16_t voltage = (uint16_t)((sin(2 * M_PI * i / 1024.0)+1)*511.5);
+
+    data_short = (0b0 << 15);       // channel A
+    data_short |= (0b111 << 12);    // control bits
+    data_short |= ((voltage & 0x3FF) << 2);
+
+    data[0] = (data_short >> 8) & 0xFF;
+    data[1] = data_short & 0xFF;
 
     cs_select(PIN_CS_DAC);
-    spi_write_blocking(spi_default, data, 2); // where data is a uint8_t array with length len
+    spi_write_blocking(spi_default, data, 2);
     cs_deselect(PIN_CS_DAC);
 }
 
@@ -98,9 +114,9 @@ void ram_write_sine() {
 
     for (i = 0; i<1024; i++){
         data_short = (channel&0b1) << 15; // place channel bit
-        data_short = data_short | (0b111<<12); // place static bits
+        data_short = data_short | (0b0111<<12); // place static bits
         
-        voltage = (uint16_t)((sin(2 * M_PI * i / 1024.0)+1)*512); // scaled to 0-1023
+        voltage = (uint16_t)((sinf(2.0f * M_PI * i / 1024.0)+1)*511.5); // scaled to 0-1023
 
         // place last 10 voltage bits into bits 2-11 of data_short
         data_short = data_short | ((voltage & 0x3FF) << 2);
@@ -111,6 +127,13 @@ void ram_write_sine() {
 
         // write to SPI RAM
         spi_ram_write(address, data, 2);
+
+        // check read/write same
+        spi_ram_read(address, data, 2);
+        if (data[0] != data[0] || data[1] != data[1]) {
+            printf("Error: Read and write data don't match!\n");
+        }
+
         address = address + 2;
     }
 
