@@ -36,3 +36,125 @@ Finished building: default.size.stdout
  
 Finished building: FDCAN_Com_Polling.list
  
+14:42:50 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12140	     36	   1940	  14116	   3724	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+14:46:23 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12140	     36	   1940	  14116	   3724	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+14:49:03 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc -o "FDCAN_Com_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FDCAN_Com_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FDCAN_Com_Polling.elf
+ 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+arm-none-eabi-objdump -h -S FDCAN_Com_Polling.elf  > "FDCAN_Com_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+  12144	     36	   1940	  14120	   3728	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: FDCAN_Com_Polling.list
+ 
+14:52:31 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc -o "FDCAN_Com_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FDCAN_Com_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FDCAN_Com_Polling.elf
+ 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+arm-none-eabi-objdump -h -S FDCAN_Com_Polling.elf  > "FDCAN_Com_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+  15296	    128	   2280	  17704	   4528	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: FDCAN_Com_Polling.list
+ 
+14:59:10 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c: In function 'main':
+/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c:212:41: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  212 |       printf("message received: %s\r\n",(char)rxData);
+      |                                         ^
+/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c:212:34: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+  212 |       printf("message received: %s\r\n",(char)rxData);
+      |                                 ~^      ~~~~~~~~~~~~
+      |                                  |      |
+      |                                  char * int
+      |                                 %d
+arm-none-eabi-gcc -o "FDCAN_Com_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FDCAN_Com_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FDCAN_Com_Polling.elf
+ 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+arm-none-eabi-objdump -h -S FDCAN_Com_Polling.elf  > "FDCAN_Com_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+  16832	    128	   2280	  19240	   4b28	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: FDCAN_Com_Polling.list
+ 
+15:02:07 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc -o "FDCAN_Com_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FDCAN_Com_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FDCAN_Com_Polling.elf
+ 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+arm-none-eabi-objdump -h -S FDCAN_Com_Polling.elf  > "FDCAN_Com_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+  16828	    128	   2280	  19236	   4b24	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: FDCAN_Com_Polling.list
+ 
+15:03:07 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc -o "FDCAN_Com_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FDCAN_Com_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FDCAN_Com_Polling.elf
+ 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+arm-none-eabi-objdump -h -S FDCAN_Com_Polling.elf  > "FDCAN_Com_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+  16828	    128	   2280	  19236	   4b24	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: FDCAN_Com_Polling.list
+ 
+15:09:25 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16828	    128	   2280	  19236	   4b24	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+15:11:31 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+arm-none-eabi-gcc -o "FDCAN_Com_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FDCAN_Com_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FDCAN_Com_Polling.elf
+ 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+arm-none-eabi-objdump -h -S FDCAN_Com_Polling.elf  > "FDCAN_Com_Polling.list"
+   text	   data	    bss	    dec	    hex	filename
+  16824	    128	   2280	  19232	   4b20	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 
+Finished building: FDCAN_Com_Polling.list
+ 
+15:11:43 **** Incremental Build of configuration Debug for project FDCAN_Com_Polling ****
+make -j7 all 
+arm-none-eabi-size  FDCAN_Com_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16824	    128	   2280	  19232	   4b20	FDCAN_Com_Polling.elf
+Finished building: default.size.stdout
+ 

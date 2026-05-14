@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/ethanchien/Documents/GitHub/ME433/HW12 CAN"/>
 			<item value="/Users/ethanchien/Documents/GitHub/ME433/HW11 STM32 UART"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -14,7 +15,7 @@
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="232"/>
-			<item key="DIALOG_Y_ORIGIN" value="61"/>
+			<item key="DIALOG_Y_ORIGIN" value="151"/>
 			<item key="DIALOG_WIDTH" value="586"/>
 			<item key="DIALOG_HEIGHT" value="687"/>
 			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>

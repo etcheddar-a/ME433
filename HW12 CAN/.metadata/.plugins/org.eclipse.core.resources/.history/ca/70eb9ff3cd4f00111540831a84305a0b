@@ -52,7 +52,9 @@ FDCAN_HandleTypeDef hfdcan1;
 FDCAN_RxHeaderTypeDef rxHeader;
 FDCAN_TxHeaderTypeDef txHeader;
 uint8_t rxData[16U];
-static const uint8_t txData[] = "hello world";
+static const uint8_t txData[] = {0x10, 0x32, 0x54, 0x76, 0x98, 0x00, 0x11, 0x22,
+                                 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0x00
+                                };
 
 /* USER CODE END PV */
 
@@ -195,9 +197,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    BSP_LED_On(LED1);
-
-	/* Polling mode: Wait for one message received */
+    /* Polling mode: Wait for one message received */
     while (HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0) < 1U)
     {
       /* Do nothing, wait */
@@ -216,7 +216,6 @@ int main(void)
         (BufferCmp8b(txData, rxData, COUNTOF(rxData)) == 0U))
     {
       /* Turn LED1 on */
-      printf("message received: %s\r\n",(const char*)rxData);
       BSP_LED_On(LED1);
     }
     /* USER CODE END WHILE */
@@ -337,8 +336,6 @@ void BSP_PB_Callback(Button_TypeDef Button)
   {
     /* Turn LED1 off */
     BSP_LED_Off(LED1);
-
-    printf("message sent\r\n");
 
     /* Add message to TX FIFO */
     if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &txHeader, txData) != HAL_OK)
