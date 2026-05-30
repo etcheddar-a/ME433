@@ -1,6 +1,6 @@
 #include "hx711.h"
 
-#define DELAY 10
+#define DELAY 1
 #define DATA_PIN 9
 #define CLOCK_PIN 8
 

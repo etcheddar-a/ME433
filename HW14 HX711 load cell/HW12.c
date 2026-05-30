@@ -25,7 +25,7 @@ int main()
             for (int i=0; i<n_samp; i++){
                 int raw = hx711_read();
                 // implement IIR
-                avg = 0.9*avg + 0.1*raw;
+                avg = 0.8*avg + 0.2*raw;
                 data[i] = avg;
                 raw_data[i] = raw;
                 // save timestamp
