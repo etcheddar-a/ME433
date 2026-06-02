@@ -1,0 +1,340 @@
+12:16:44 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:622:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  622 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  36448	    132	   5772	  42352	   a570	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:16:56 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:623:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  623 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  36456	    132	   5772	  42360	   a578	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:17:43 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:624:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  624 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  36672	    132	   5772	  42576	   a650	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:21:07 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:625:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  625 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  36800	    132	   5772	  42704	   a6d0	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:21:46 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:22:25 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:22:51 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:23:19 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:23:42 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:24:01 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:24:19 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    132	   5772	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:26:15 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:26:38 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:26:57 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:27:13 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:27:31 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:27:57 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:28:14 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:28:30 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
+12:28:47 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+make -j7 all 
+arm-none-eabi-gcc "/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
+/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/main.c:621:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
+  621 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32CubeIDE.elf
+ 
+arm-none-eabi-size  STM32CubeIDE.elf 
+arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
+   text	   data	    bss	    dec	    hex	filename
+  37156	    136	   5768	  43060	   a834	STM32CubeIDE.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32CubeIDE.list
+ 
