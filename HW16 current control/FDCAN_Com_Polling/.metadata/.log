@@ -48,3 +48,32 @@ Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/etha
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-02 12:01:59.727
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-06-04 12:42:18.686 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/ethanchien/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/ethanchien/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-06-04 12:42:32.032
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-04 12:42:33.663
+!MESSAGE Log4j2 initialized with config file /Users/ethanchien/Documents/GitHub/ME433/HW16 current control/FDCAN_Com_Polling/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-04 12:42:37.422
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-06-08 12:34:21.991 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/ethanchien/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/ethanchien/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-06-08 12:34:33.450
+!MESSAGE Log4j2 initialized with config file /Users/ethanchien/Documents/GitHub/ME433/HW16 current control/FDCAN_Com_Polling/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-06-08 12:34:39.443
+!MESSAGE Started RMI Server, listening on port 41337

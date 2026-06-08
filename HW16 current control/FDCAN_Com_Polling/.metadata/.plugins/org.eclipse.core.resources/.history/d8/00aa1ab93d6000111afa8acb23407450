@@ -35,6 +35,11 @@
 /* USER CODE BEGIN PD */
 #define TX_ID          (0x111)   /* TX CAN message identifier    */
 #define RX_ID          (0x111)   /* RX CAN message identifier    */
+#define INA219_REG_CALIBRATION 0x05
+#define INA219_REG_CONFIG 0x00
+#define INA219_REG_CURRENT 0x04
+#define INA219_ADDR 0b1000000
+#define CURRENT_EINTMAX 1000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -62,6 +67,12 @@ static const uint8_t txData[] = {0x10, 0x32, 0x54, 0x76, 0x98, 0x00, 0x11, 0x22,
                                  0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0x00
                                 };
 
+volatile int state = 0;
+volatile float itest_desired_current[400];
+volatile float itest_actual_current[400];
+volatile float Kp_current = 0.03;
+volatile float Ki_current = 0.03;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,6 +86,10 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength);
 uint32_t adc_read();
+void ina219_init();
+float ina219_read();
+void ina219_write(int reg, int value);
+void set_pwm(float duty_cycle);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -190,6 +205,12 @@ int main(void)
   {
     Error_Handler();
   }
+
+  HAL_TIM_Base_Start_IT(&htim2);
+  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 2400);
+  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 2400);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   /* USER CODE END 2 */
 
   /* Initialize leds */
@@ -209,12 +230,29 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  ina219_init();
   while (1)
   {
-	  uint32_t adc_value;
-	  adc_value = adc_read();
-	  printf("%d\r\n", (int)adc_value);
-	  HAL_Delay(100);
+	  // receive byte from virtual COM port
+	  unsigned char rx_byte;
+	  if (HAL_UART_Receive(&hcom_uart[COM1], &rx_byte, 1, 0) == HAL_OK){
+
+	  } else {
+		  rx_byte = 0;
+	  }
+
+	  // if a, then change state
+	  if(rx_byte == 'a'){
+		  state = 1;
+		  while(state == 1){
+			  // do nothing
+		  }
+
+		  int i = 0;
+		  for (i=0;i<400;i++){
+			  printf("%d %d %d\r\n", i, (int)(itest_desired_current[i]*1000), (int)(itest_actual_current[i]*1000));
+		  }
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -607,6 +645,104 @@ uint32_t adc_read(){
 	}
 	HAL_ADC_Stop(&hadc1);
 	return adc_value;
+}
+
+void ina219_init(){
+    // set the INA219 sensitivity - 10 bit, plus/minus160mV, 148us per sample
+    unsigned short ina219_calValue = 1024;
+    unsigned short ina219_config = 0b0011000010001111;
+    ina219_write(INA219_REG_CALIBRATION, ina219_calValue);
+    ina219_write(INA219_REG_CONFIG, ina219_config);
+}
+
+void ina219_write(int reg, int value){ // value must be 16 bit
+	uint8_t buf[3];
+	buf[0] = reg;
+	buf[1] = value>>8;
+	buf[2] = value&0xff;
+
+	HAL_I2C_Master_Transmit(&hi2c2, INA219_ADDR<<1, buf, 3, 10);
+}
+
+float ina219_read(){ // returns in mA
+	unsigned char reg = INA219_REG_CURRENT;
+    HAL_I2C_Master_Transmit(&hi2c2, INA219_ADDR<<1, &reg, 1, 10);
+    uint8_t buffer[2];
+    HAL_I2C_Master_Receive(&hi2c2, INA219_ADDR<<1, buffer, 2, 10);
+    signed short value = (buffer[0]<<8)|buffer[1];
+    float current;
+    current = value / 3.0;
+    return current;
+}
+
+void set_pwm(float duty_cycle){
+	// duty cycle between -100 and 100
+	if (duty_cycle >= 0){
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 2400);
+		float inv_duty_cycle = 100-duty_cycle;
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 2400*inv_duty_cycle/100);
+	} else {
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 2400);
+		float inv_duty_cycle = 100+duty_cycle;
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 2400*inv_duty_cycle/100);
+	}
+}
+
+// timer based interrupt
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim == &htim2) {
+    	// emergency stop
+		uint32_t adc_value = adc_read();
+		if ((adc_value < 250) || (adc_value > 3845)){
+			__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 2400);
+			__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 2400);
+			//printf("emergency stop!\r\n");
+		}
+
+		// current control
+		if (state == 1){
+			static int counter = 0;
+			float desired_current;
+			// alternate desired current every 100ms
+			if ((counter < 100) || (counter >= 200 && counter < 300)){
+				desired_current = -100;
+			} else {
+				desired_current = 100;
+			}
+			// read current
+			float current = ina219_read();
+			// save desired and actual current for plotting later
+			itest_desired_current[counter] = desired_current;
+			itest_actual_current[counter] = current;
+			// compute error and integral
+			float error = desired_current - current;
+			static float eint = 0;
+			eint += error;
+			// integral anti-windup
+			if (eint > CURRENT_EINTMAX) {
+				eint = CURRENT_EINTMAX;
+			} else if (eint < -CURRENT_EINTMAX) {
+				eint = -CURRENT_EINTMAX;
+			}
+			// calculate u
+			float u = Kp_current * error + Ki_current * eint;
+			if (u > 100) {
+				u = 100;
+			} else if (u < -100) {
+				u = -100;
+			}
+			// set pwm
+			set_pwm(u);
+
+			counter++;
+			if (counter == 400){
+				counter = 0;
+				state = 0;
+				set_pwm(0);
+			}
+		}
+    }
 }
 /* USER CODE END 4 */
 

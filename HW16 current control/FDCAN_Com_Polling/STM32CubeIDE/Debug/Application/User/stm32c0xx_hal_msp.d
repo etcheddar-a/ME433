@@ -1,5 +1,5 @@
 Application/User/stm32c0xx_hal_msp.o: \
- /Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Src/stm32c0xx_hal_msp.c \
+ /Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Src/stm32c0xx_hal_msp.c \
  ../../Inc/main.h ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h \
  ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h \
  ../../Drivers/CMSIS/Device/ST/STM32C0xx/Include/stm32c0xx.h \

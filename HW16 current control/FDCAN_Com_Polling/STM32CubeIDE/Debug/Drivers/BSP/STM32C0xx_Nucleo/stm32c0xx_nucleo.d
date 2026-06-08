@@ -1,6 +1,6 @@
 Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.o: \
- /Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.c \
- /Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.h \
+ /Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.c \
+ /Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.h \
  ../../Inc/stm32c0xx_nucleo_conf.h \
  ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h \
  ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h \
@@ -39,8 +39,8 @@ Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.o: \
  ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart.h \
  ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart_ex.h \
  ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_fdcan.h \
- /Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo_errno.h
-/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.h:
+ /Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo_errno.h
+/Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.h:
 ../../Inc/stm32c0xx_nucleo_conf.h:
 ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h:
 ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h:
@@ -79,4 +79,4 @@ Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.o: \
 ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart.h:
 ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart_ex.h:
 ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_fdcan.h:
-/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo_errno.h:
+/Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo_errno.h:

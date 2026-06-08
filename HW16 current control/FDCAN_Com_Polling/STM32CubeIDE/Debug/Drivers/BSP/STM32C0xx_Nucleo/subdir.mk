@@ -5,7 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.c 
+/Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.c 
 
 OBJS += \
 ./Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.o 
@@ -15,8 +15,8 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.o: /Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.c Drivers/BSP/STM32C0xx_Nucleo/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.o: /Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.c Drivers/BSP/STM32C0xx_Nucleo/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/STM32C0xx_Nucleo/stm32c0xx_nucleo.d" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 
 clean: clean-Drivers-2f-BSP-2f-STM32C0xx_Nucleo
 

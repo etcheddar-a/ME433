@@ -62,8 +62,8 @@ all: main-build
 main-build: STM32CubeIDE.elf secondary-outputs
 
 # Tool invocations
-STM32CubeIDE.elf STM32CubeIDE.map: $(OBJS) $(USER_OBJS) /Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"/Users/ethanchien/STM32Cube/Example/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM32CubeIDE.elf STM32CubeIDE.map: $(OBJS) $(USER_OBJS) /Users/ethanchien/Documents/GitHub/ME433/HW16\ current\ control/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW16 current control/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
