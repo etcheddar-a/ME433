@@ -1,0 +1,8 @@
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:72:6:NMI_Handler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:85:6:HardFault_Handler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:100:6:SVC_Handler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:113:6:PendSV_Handler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:126:6:SysTick_Handler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:147:6:TIM2_IRQHandler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:161:6:USART1_IRQHandler	8	static
+/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/stm32c0xx_it.c:176:6:EXTI4_15_IRQHandler	8	static
