@@ -1,4 +1,4 @@
-19:41:16 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+16:05:27 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
 make -j7 all 
 arm-none-eabi-size  STM32CubeIDE.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  STM32CubeIDE.elf
 Finished building: default.size.stdout
  
 
-19:41:16 Build Finished. 0 errors, 0 warnings. (took 151ms)
+16:05:27 Build Finished. 0 errors, 0 warnings. (took 159ms)
 

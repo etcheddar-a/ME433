@@ -1,39 +1,10 @@
-21:56:38 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
+18:53:03 **** Incremental Build of configuration Debug for project STM32CubeIDE ****
 make -j7 all 
-arm-none-eabi-gcc "/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C092xx -DUSE_NUCLEO_64 -c -I../../Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc -I../../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../../Drivers/CMSIS/Include -I../../Drivers/BSP/STM32C0xx_Nucleo -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Application/User/main.o"
-/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c: In function 'main':
-/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c:239:32: warning: passing argument 2 of 'HAL_UART_Receive_IT' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  239 |   HAL_UART_Receive_IT(&huart1, &uart_rx, 1);
-      |                                ^~~~~~~~
-In file included from ../../Inc/stm32c0xx_hal_conf.h:241,
-                 from ../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h:30,
-                 from ../../Inc/main.h:30,
-                 from /Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c:22:
-../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart.h:1634:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
- 1634 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
-      |                                                                  ~~~~~~~~~^~~~~
-/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c: In function 'HAL_UART_RxCpltCallback':
-/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c:815:46: warning: passing argument 2 of 'HAL_UART_Receive_IT' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  815 |                 HAL_UART_Receive_IT(&huart1, &uart_rx, 1);
-      |                                              ^~~~~~~~
-../../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_uart.h:1634:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile uint8_t *' {aka 'volatile unsigned char *'}
- 1634 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
-      |                                                                  ~~~~~~~~~^~~~~
-/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c: At top level:
-/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/Src/main.c:677:17: warning: 'BufferCmp8b' defined but not used [-Wunused-function]
-  677 | static uint32_t BufferCmp8b(const uint8_t *pBuffer1, const uint8_t *pBuffer2, uint16_t BufferLength)
-      |                 ^~~~~~~~~~~
-arm-none-eabi-gcc -o "STM32CubeIDE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/Users/ethanchien/Documents/GitHub/ME433/HW18 haptic paddle/FDCAN_Com_Polling/STM32CubeIDE/STM32C092RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32CubeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: STM32CubeIDE.elf
- 
 arm-none-eabi-size  STM32CubeIDE.elf 
-arm-none-eabi-objdump -h -S STM32CubeIDE.elf  > "STM32CubeIDE.list"
    text	   data	    bss	    dec	    hex	filename
-  45448	    136	   5928	  51512	   c938	STM32CubeIDE.elf
+  44680	    136	   2728	  47544	   b9b8	STM32CubeIDE.elf
 Finished building: default.size.stdout
  
-Finished building: STM32CubeIDE.list
- 
 
-21:56:38 Build Finished. 0 errors, 3 warnings. (took 511ms)
+18:53:04 Build Finished. 0 errors, 0 warnings. (took 171ms)
 

@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(position_control position_control.c as5600.c)
+add_executable(position_control position_control.c as5600.c hx711.c)
 
 pico_set_program_name(position_control "position_control")
 pico_set_program_version(position_control "0.1")
